@@ -14,9 +14,11 @@ fn conncetion_listener() {
     for stream in listener.incoming() {
         match stream {
             Ok(_stream) => {
-                println!("A client onnected");
+                println!("A client connected");
             },
-            Err(_) => todo!(),
+            Err(_) => {
+                println!("A client failed to connect");
+            }
         }
     }
 }
